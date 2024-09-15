@@ -1,6 +1,6 @@
 ---
 home: true
-title: HomeCes
+title: 首页
 heroImage: https://vuejs.press/images/hero.png
 actions:
   - text: Get Started
