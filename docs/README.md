@@ -1,6 +1,6 @@
 ---
 home: true
-title: 测试
+title: HomeCes
 heroImage: https://vuejs.press/images/hero.png
 actions:
   - text: Get Started
