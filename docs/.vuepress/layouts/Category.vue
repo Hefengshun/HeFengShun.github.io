@@ -20,10 +20,12 @@ const categoryMap = useBlogCategory("category");
             :active="route.path === path"
             class="category"
           >
-            {{ name }}
-            <span class="category-num">
-              {{ items.length }}
-            </span>
+            <h1>
+              这是分类 {{ name }}
+              <span class="category-num">
+                {{ items.length }}
+              </span>
+            </h1>
           </RouteLink>
         </div>
         <CommentService />
@@ -38,9 +40,7 @@ const categoryMap = useBlogCategory("category");
 
 .category-wrapper {
   @include mixins.content_wrapper;
-
-  padding-top: 1rem !important;
-  padding-bottom: 0 !important;
+  padding: 5rem 2.5rem;
 
   font-size: 14px;
 

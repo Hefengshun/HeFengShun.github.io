@@ -5,14 +5,30 @@ import { viteBundler } from "@vuepress/bundler-vite";
 import { commentPlugin } from "@vuepress/plugin-comment";
 
 export default defineUserConfig({
-  lang: "en-US",
+  lang: "zh-CN",
+
+  // locales: {
+  //   "/": {
+  //     lang: "en-US",
+  //   },
+  //   "/zh/": {
+  //     lang: "zh-CN",
+  //   },
+  // },
 
   title: "VuePress",
   description: "My first VuePress Site",
 
   theme: defaultTheme({
     logo: "https://vuejs.press/images/hero.png",
-
+    // locales: {
+    //   "/": {
+    //     selectLanguageName: "English",
+    //   },
+    //   "/zh/": {
+    //     selectLanguageName: "简体中文",
+    //   },
+    // },
     navbar: [
       "/",
       {
