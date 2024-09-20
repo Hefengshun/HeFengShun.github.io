@@ -11,7 +11,7 @@ archive: true
 
 ## Heading 2
 
-<SearchPanel /> 测试这组件并没用
+测试这组件并没用
 
 Here is the `content.`
 

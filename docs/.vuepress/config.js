@@ -3,6 +3,8 @@ import { defaultTheme } from "@vuepress/theme-default";
 import { defineUserConfig } from "vuepress";
 import { viteBundler } from "@vuepress/bundler-vite";
 import { commentPlugin } from "@vuepress/plugin-comment";
+// import { searchPlugin } from "@vuepress/plugin-search";
+import { docsearchPlugin } from "@vuepress/plugin-docsearch";
 
 export default defineUserConfig({
   lang: "zh-CN",
@@ -152,6 +154,22 @@ export default defineUserConfig({
         },
       ],
       hotReload: true,
+    }),
+    // searchPlugin({
+    //   locales: {
+    //     "/": {
+    //       placeholder: "Search",
+    //     },
+    //     "/zh/": {
+    //       placeholder: "搜索",
+    //     },
+    //   },
+    //   // 允许搜索 Frontmatter 中的 `tags`
+    //   getExtraFields: (page) => page.frontmatter.tags ?? [],
+    // }),
+    docsearchPlugin({
+      // 配置项
+      lang: "zh-CN",
     }),
     commentPlugin({
       provider: "Giscus", // Artalk | Giscus | Waline | Twikoo
