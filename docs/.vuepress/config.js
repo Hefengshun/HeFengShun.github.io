@@ -8,13 +8,14 @@ import { docsearchPlugin } from "@vuepress/plugin-docsearch";
 
 export default defineUserConfig({
   lang: "zh-CN",
+  // lang: "en-US",
 
   // locales: {
   //   "/": {
-  //     lang: "en-US",
+  //     lang: "zh-CN",
   //   },
   //   "/zh/": {
-  //     lang: "zh-CN",
+  //     lang: "en-US",
   //   },
   // },
 
@@ -23,14 +24,7 @@ export default defineUserConfig({
 
   theme: defaultTheme({
     logo: "https://vuejs.press/images/hero.png",
-    // locales: {
-    //   "/": {
-    //     selectLanguageName: "English",
-    //   },
-    //   "/zh/": {
-    //     selectLanguageName: "简体中文",
-    //   },
-    // },
+
     navbar: [
       "/",
       {
@@ -158,9 +152,7 @@ export default defineUserConfig({
     // searchPlugin({
     //   locales: {
     //     "/": {
-    //       placeholder: "Search",
-    //     },
-    //     "/zh/": {
+    //       // placeholder: "Search",
     //       placeholder: "搜索",
     //     },
     //   },
@@ -169,7 +161,21 @@ export default defineUserConfig({
     // }),
     docsearchPlugin({
       // 配置项
-      lang: "zh-CN",
+      locales: {
+        "/": {
+          lang: "zh-CN",
+          placeholder: "搜索文档",
+          translations: {
+            button: {
+              buttonText: "搜索文档",
+            },
+          },
+        },
+        "/zh/": {
+          lang: "zh-CN",
+          placeholder: "搜索",
+        },
+      },
     }),
     commentPlugin({
       provider: "Giscus", // Artalk | Giscus | Waline | Twikoo
